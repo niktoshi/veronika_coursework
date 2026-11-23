@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --ink: #202020;
+  --rose: #c97772;
+  --cream: #f8f4f0;
+  --muted: #777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--rose);
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(22, 18, 17, .76), rgba(22, 18, 17, .1)),
+    url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1800')
+    center / cover;
+  min-height: 540px;
+  color: white;
+}
+
+.hero h1 {
+  font: 700 clamp(2.5rem, 6vw, 5rem) 'Playfair Display', serif;
+  max-width: 700px;
+}
+
+.eyebrow {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: .74rem;
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.section {
+  padding: 76px 0;
+}
+
+.section-soft {
+  background: var(--cream);
+}
+
+.service-card,
+.product-card,
+.master-card {
+  border: 1px solid #eee;
+  height: 100%;
+  transition: .2s;
+  background: #fff;
+}
+
+.service-card:hover,
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #24160d12;
+}
+
+.service-card {
+  padding: 28px;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--rose);
+}
+
+.product-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.master-card img {
+  height: 230px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.master-card .p-3 {
+  padding: 20px !important;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btn-dark {
+  background: #222;
+  border-color: #222;
+}
+
+.btn-rose {
+  background: var(--rose);
+  border-color: var(--rose);
+  color: #fff;
+}
+
+.btn-rose:hover {
+  background: #ae625e;
+  color: #fff;
+}
+
+.slot {
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  color: #222;
+  min-width: 92px;
+}
+
+.slot.available:hover,
+.slot.selected {
+  background: #222;
+  color: #fff;
+}
+
+.slot.busy {
+  background: #f2dddd;
+  border-color: #e3b6b3;
+  color: #aa6661;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.status {
+  font-size: .75rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #8b6700;
+}
+
+.status-confirmed {
+  background: #d8f3e5;
+  color: #167344;
+}
+
+.status-completed {
+  background: #e6e6e6;
+  color: #555;
+}
+
+.status-cancelled {
+  background: #f7dddd;
+  color: #9a4242;
+}
+
+.status-paid {
+  background: #d8f3e5;
+  color: #167344;
+}
+
+.status-processing {
+  background: #fff3cd;
+  color: #8b6700;
+}
+
+.status-shipped {
+  background: #dce8ff;
+  color: #315da8;
+}
+
+.appointment-row {
+  border-bottom: 1px solid #eee;
+  padding: 18px 0;
+}
+
+.admin-table {
+  font-size: .92rem;
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .slot {
+    min-width: 74px;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+}
